@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.23.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CmG-bB-g7o">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.16.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFUIText-Medium.otf">
+            <string>SFUIText-Medium</string>
+        </array>
+        <array key="SFUIText-Regular.otf">
+            <string>SFUIText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Wou-Ar-tOK">
+            <objects>
+                <navigationController id="CmG-bB-g7o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d6N-SL-4MK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="04j-MW-6Bg" kind="relationship" relationship="rootViewController" id="W35-7u-BUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5T-Al-FIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="279"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="o0Y-yL-OjO">
+            <objects>
+                <viewController id="04j-MW-6Bg" customClass="MainViewController" customModule="TestHH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHr-nv-IiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfQ-ka-2F3">
+                                <rect key="frame" x="107.5" y="308.5" width="160" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.60784313725490191" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Irz-mX-wIC"/>
+                                    <constraint firstAttribute="width" constant="160" id="pzC-ca-DUb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI  Text" pointSize="17"/>
+                                <state key="normal" title="Авторизация">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="JPM-y9-VbH" kind="show" id="EFm-fC-l1n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mfQ-ka-2F3" firstAttribute="centerX" secondItem="vHr-nv-IiQ" secondAttribute="centerX" id="wcM-5Z-b4h"/>
+                            <constraint firstItem="mfQ-ka-2F3" firstAttribute="centerY" secondItem="vHr-nv-IiQ" secondAttribute="centerY" id="z4l-3H-ari"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8H-Dg-kLH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jk7-Lv-qIT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qXr-4g-SnF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jvD-6I-YDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="277.51124437781112"/>
+        </scene>
+        <!--Авторизация-->
+        <scene sceneID="nrp-af-QDb">
+            <objects>
+                <viewController title="Авторизация" id="JPM-y9-VbH" customClass="AuthViewController" customModule="TestHH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W48-Lb-RlC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B30-zc-vae">
+                                <rect key="frame" x="15" y="283.5" width="345" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huz-tg-bvZ" customClass="InputTextView" customModule="TestHH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uN3-yJ-Hnj" customClass="InputTextView" customModule="TestHH" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="345" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Oci-VR-wsZ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMi-Th-KTy">
+                                <rect key="frame" x="114" y="416.5" width="147" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.60784313725490191" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="BAF-Vs-hos"/>
+                                    <constraint firstAttribute="height" constant="44" id="SVS-x2-zLs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI  Text" pointSize="15"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionSign:" destination="JPM-y9-VbH" eventType="touchUpInside" id="1yh-Ef-hye"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMF-xg-7Jn">
+                                <rect key="frame" x="58" y="481.5" width="259" height="30"/>
+                                <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="15"/>
+                                <state key="normal" title="У меня еще нет аккаунта. Создать.">
+                                    <color key="titleColor" red="0.21568627450980393" green="0.52156862745098043" blue="0.78431372549019607" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionCreateAccount:" destination="JPM-y9-VbH" eventType="touchUpInside" id="Hwk-jJ-Nvd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dsi-ta-3HT" firstAttribute="trailing" secondItem="B30-zc-vae" secondAttribute="trailing" constant="15" id="6UV-5l-o9J"/>
+                            <constraint firstItem="B30-zc-vae" firstAttribute="centerX" secondItem="W48-Lb-RlC" secondAttribute="centerX" id="8gq-oT-NR6"/>
+                            <constraint firstItem="DMF-xg-7Jn" firstAttribute="top" secondItem="UMi-Th-KTy" secondAttribute="bottom" constant="21" id="Llm-da-ezW"/>
+                            <constraint firstItem="DMF-xg-7Jn" firstAttribute="centerX" secondItem="UMi-Th-KTy" secondAttribute="centerX" id="N0g-UC-2Gh"/>
+                            <constraint firstItem="B30-zc-vae" firstAttribute="centerY" secondItem="W48-Lb-RlC" secondAttribute="centerY" id="RTF-Ih-iZX"/>
+                            <constraint firstItem="B30-zc-vae" firstAttribute="leading" secondItem="dsi-ta-3HT" secondAttribute="leading" constant="15" id="Rvp-vf-WDP"/>
+                            <constraint firstItem="UMi-Th-KTy" firstAttribute="centerX" secondItem="W48-Lb-RlC" secondAttribute="centerX" id="STG-PL-Dcg"/>
+                            <constraint firstItem="UMi-Th-KTy" firstAttribute="top" secondItem="B30-zc-vae" secondAttribute="bottom" constant="33" id="UgN-DA-KSg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dsi-ta-3HT"/>
+                    </view>
+                    <connections>
+                        <outlet property="centerYStackViewConstraint" destination="RTF-Ih-iZX" id="6hw-Wd-ltv"/>
+                        <outlet property="createButton" destination="DMF-xg-7Jn" id="zIa-d1-LK0"/>
+                        <outlet property="emailView" destination="huz-tg-bvZ" id="adZ-5s-UCc"/>
+                        <outlet property="passwordView" destination="uN3-yJ-Hnj" id="I2k-VE-aKA"/>
+                        <outlet property="signButton" destination="UMi-Th-KTy" id="lH9-p5-VRv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DrV-T0-z8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1253.5999999999999" y="278.41079460269867"/>
+        </scene>
+    </scenes>
+</document>
